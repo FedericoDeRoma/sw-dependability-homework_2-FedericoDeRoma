@@ -8,7 +8,7 @@ import org.magee.math.Rational;
 
 public class RationalTest {
 
-    /* This method test the following operation: -[(-1/-1)-(-1)]
+    /* This method tests the following operation: -[(-1/-1)-(-1)]
     The result expected should be -2, not 0.
     The validity of the test is due to the fact that the method subtract(long) in the production class convert the integer
     into rational in a wrong way. It has to use 1 as denominator instead of (-1).
@@ -22,7 +22,7 @@ public class RationalTest {
     }
 
 
-    /* This method test the following operation: |-1/-1| * (-1/-1) = 1/1 * (-1/-1) = -1/-1 = 1
+    /* This method tests the following operation: |-1/-1| * (-1/-1) = 1/1 * (-1/-1) = -1/-1 = 1
     The method multiply(Rational) in the production class divides the numerators instead of multiplying them.
     */
     @Test
@@ -34,7 +34,7 @@ public class RationalTest {
         assertEquals((byte) 1, rational1.byteValue());  //OK
     }
 
-    /* This method test the following operation: [-(-2685/-2685)]^(-1) = -1
+    /* This method tests the following operation: [-(-2685/-2685)]^(-1) = -1
      */
     @Test
     public void test03()  throws Throwable  {
@@ -46,7 +46,7 @@ public class RationalTest {
         assertEquals((short) (-1), rational2.shortValue());
     }
 
-    /* This method test the following operation: -1432/0 * 1
+    /* This method tests the following operation: -1432/0 * 1
        This operation is not allowed because the denominator is 0!
     */
     @Test
@@ -66,7 +66,7 @@ public class RationalTest {
         }
     }
 
-    /* This method test the following operation: (667/1415) / (667/1415) = (667/1415) * (1415/667) = 943805/943805 = 1
+    /* This method tests the following operation: (667/1415) / (667/1415) = (667/1415) * (1415/667) = 943805/943805 = 1
       The problem it's the same as the test02 -> the method multiply(Rational) in the production class has a bug.
     */
     @Test
@@ -79,7 +79,7 @@ public class RationalTest {
         assertEquals(943805L, rational1.denominator);
     }
 
-    /* This method test the following operation: (-1/-1) / (-1/-1) = (-1/-1) * (-1/-1) = 1/1 = 1
+    /* This method tests the following operation: (-1/-1) / (-1/-1) = (-1/-1) * (-1/-1) = 1/1 = 1
      */
     @Test
     public void test06()  throws Throwable  {
@@ -89,7 +89,7 @@ public class RationalTest {
         assertEquals(1L, rational1.longValue());
     }
 
-    /* This method test the following operation: (2/2)^0 = 2^0/2^0 = 1/1 = 1
+    /* This method tests the following operation: (2/2)^0 = 2^0/2^0 = 1/1 = 1
      */
     @Test
     public void test07()  throws Throwable  {
@@ -100,7 +100,7 @@ public class RationalTest {
         assertEquals(1.0, rational1.doubleValue(), 0.01);
     }
 
-    /* This method test the following operation: 1439/1439 + 0 = 1
+    /* This method tests the following operation: 1439/1439 + 0 = 1
     The method add(long) in the production class convert in a wrong way the integer into a rational because it uses 0
     as a denominator raising a NumberFormatException.
     */
@@ -120,7 +120,7 @@ public class RationalTest {
         }
     }
 
-    /* This method test the following operation: 0/2503 = 0/0 - (-4002) = 1
+    /* This method tests the following operation: 0/2503 = 0/0 - (-4002) = 1
     This operation is not allowed because there is 0 as denominator.
     */
     @Test
@@ -140,7 +140,7 @@ public class RationalTest {
         }
     }
 
-    /* This method test the following operation: 1/1 + null
+    /* This method tests the following operation: 1/1 + null
     This operation is not allowed!
     */
     @Test
